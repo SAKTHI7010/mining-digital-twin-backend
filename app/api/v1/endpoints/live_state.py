@@ -3,9 +3,9 @@ from app.models.api_models import APIResponse
 from app.services.plant_service import plant_service
 from typing import Dict, Any
 
-router = APIRouter(prefix="/live_state")
+router = APIRouter()
 
-@router.get("/{plant_id}", response_model=APIResponse[Dict[str, Any]])
+@router.get("/{plant_id}/live-state", response_model=APIResponse[Dict[str, Any]])
 def get_live_state(plant_id: str):
     plant = plant_service.get_plant_by_id(plant_id)
     

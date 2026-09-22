@@ -35,8 +35,20 @@ class KPI(BaseModel):
 
 class SimulationRequest(BaseModel):
     plant_id: str
-    inputs: Dict[str, float]
+    feed_rate: Optional[float] = 1100.0
+    ore_hardness: Optional[float] = 14.5
+    cu_feed_grade: Optional[float] = 0.85
+    moisture: Optional[float] = 6.5
+    sag_speed: Optional[float] = 72.0
+    ball_charge: Optional[float] = 32.0
+    cyclone_pressure: Optional[float] = 95.0
+    air_flow_rate: Optional[float] = 1200.0
+    froth_depth: Optional[float] = 12.0
+    collector_dosage: Optional[float] = 35.0
+    frother_dosage: Optional[float] = 18.0
+    flocculant_dosage: Optional[float] = 28.0
     duration_hours: float = 1.0
+    inputs: Optional[Dict[str, float]] = None
 
 class SimulationResult(BaseModel):
     scenario: str
