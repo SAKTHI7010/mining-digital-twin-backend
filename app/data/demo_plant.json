@@ -1,0 +1,18 @@
+{
+  "plants": [
+    {
+      "plant_id": "PLANT_001",
+      "name": "Copper Concentrator Demo Plant",
+      "location": "Demo Site, Mining Region",
+      "ore_type": "Sulphide Copper",
+      "design_throughput_tph": 1200,
+      "circuits": [
+        {"circuit_id": "GRIND_01", "type": "Grinding", "units": ["SAG_01", "BALL_01", "CYC_01"]},
+        {"circuit_id": "FLOAT_01", "type": "Flotation", "units": ["FLOAT_ROUGH_01", "FLOAT_CLEAN_01", "FLOAT_SCAV_01"]},
+        {"circuit_id": "THICK_01", "type": "Thickening", "units": ["THICK_01", "FILTER_01"]}
+      ],
+      "design_recovery_pct": 88.5,
+      "design_concentrate_grade_pct": 28.0
+    }
+  ]
+}
